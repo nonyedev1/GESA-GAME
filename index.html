@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="gesa.css" />
+    <title>Guesser</title>
+  </head>
+
+  <body>
+    <audio src="game theme.mp3" id="song"></audio>
+    <audio src="lost.mp3" id="failedGuess"></audio>
+    <audio src="final lost.mp3" id="lostSound"></audio>
+    <audio src="correct guess.mp3" id="correctGuess"></audio>
+    <div id="displayOnLoad">
+      <h4><sup>&copy;</sup>GESA‘</h4>
+    </div>
+    <div id="how">
+      <h1>How The Game Works</h1>
+      <p>
+        It tests how good the player is at guessing. It generates random numbers
+        from 1-20 and prompts the player to guess the random number. At the start
+        of the game, there is a default 20 points. At every wrong guess, the player loses 1 point. at 0 point the player loses the game, and with a correct guess the player wins and the score is saved.
+      </p>
+    </div>
+    <div class="welcomePage">
+      <div id="gameName"></div>
+      <div class="welcome">
+        <h1>YOU SABI GUESS? <br />MAKE WE SEE!</h1>
+        <input
+          type="text"
+          id="playerName"
+          placeholder="Enter Your Name"
+          required
+        />
+        <br />
+        <button id="startGameBtn" disabled>START GAME</button>
+      </div>
+    </div>
+    <div class="bigContainer">
+      <div class="guess-number">
+        <h2>GUESS A NUMBER!</h2>
+        <h2>[1-20]</h2>
+      </div>
+
+      <div class="remark">
+        <h2>START!</h2>
+      </div>
+
+      <div id="secretNumber">
+        <button>?</button>
+      </div>
+      <div class="container">
+        <div class="the-number">
+          <input type="number" placeholder="NUMBER?" id="input-number" />
+          <div class="btns">
+            <button id="check">Check</button>
+            <button id="reset">RESET</button><br />
+            <button id="restart" class="playAgain">Play Again</button> <br />
+          </div>
+        </div>
+      </div>
+      <div class="scores">
+        <p>Score:</p>
+          <div id="scorePoints"></div>
+        <p>High Score:</p>
+          <div id="highScorePoints"></div>
+      </div>
+
+    </div>
+    <div>
+      <button id="skip">skip</button>
+    </div>
+
+    <footer id="foot">
+      <h5>Built by BIGNAMEDACH <sup>&reg;</sup></h5>
+    </footer>
+
+    <script src="gesa.js">
+      number.js
+    </script>
+  </body>
+</html>
